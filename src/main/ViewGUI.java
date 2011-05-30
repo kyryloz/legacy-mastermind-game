@@ -167,7 +167,7 @@ public class ViewGUI implements IView, Observer {
 				" в окне справа покажетс€ результат попытки. ѕервое число - сколько шариков угадано " +
 				"на своей позиции. ¬торое число - сколько шариков угадано, но сто€т не на своей " +
 				"позиции." +
-				" ¬сего даетс€ 10 попыток дл€ угадывани€. Good luck.");
+				" ¬сего даетс€ 10 попыток дл€ угадывани€. ”дачи.");
 		panel.setLayout(new BorderLayout());
 		JButton ok = new JButton("OK");
 		ok.addActionListener(new ActionListener() {
