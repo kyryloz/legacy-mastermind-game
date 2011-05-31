@@ -110,6 +110,7 @@ public class Controller implements IController {
 			showCode();
 			view.showWin();	
 			startAgain();
+			hideCode();
 			
 			
 		} else if (model.getCount() == 10) {
