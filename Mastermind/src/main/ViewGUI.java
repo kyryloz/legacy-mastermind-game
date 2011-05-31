@@ -33,7 +33,7 @@ public class ViewGUI implements IView, Observer {
 		frame.setSize(370, 586);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setResizable(false);
-		frame.setTitle("MasterMind");
+		frame.setTitle("Mastermind");
 		frame.setLocationRelativeTo(null);
 		
 		mainPanel = new CanvasPanel();
