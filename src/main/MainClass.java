@@ -25,7 +25,7 @@ public class MainClass {
 				
 				String viewType = "gui";
 				if (args.length > 0) {
-					if (args[0].equals("-cosol")) {
+					if (args[0].equals("-consol")) {
 						viewType = "consol";
 					}
 					if (args[0].equals("-numbersgui")) {
