@@ -41,17 +41,17 @@ public class ViewGUI implements IView, Observer {
 		
 		mainPanel.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
 	        public void mouseDragged(MouseEvent event) {
-	            dragged(event);
+	        	controller.dragged(event);
 	        }
 	    });
 		mainPanel.addMouseListener(new java.awt.event.MouseAdapter() {
 	        public void mousePressed(MouseEvent event) {
-	            pressed(event);
+	        	controller.pressed(event);
 	        }
 	    });
 		mainPanel.addMouseListener(new java.awt.event.MouseAdapter() {
 	        public void mouseReleased(MouseEvent event) {
-	            released(event);
+	        	controller.released(event);
 	        }
 	    });
 		
@@ -105,10 +105,7 @@ public class ViewGUI implements IView, Observer {
 		
 		
 		JMenuItem rules = helpMenu.add("Как играть");
-		//helpMenu.addSeparator();
-		//JMenuItem about = helpMenu.add("О программе");
 		
-		//add listeners
 		tryAgain.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent event) {
 				controller.startAgain();
@@ -124,11 +121,7 @@ public class ViewGUI implements IView, Observer {
 				showRules();
 			}
 		});
-		//about.addActionListener(new ActionListener() {
-		//	public void actionPerformed(ActionEvent event) {
-		//		showAbout();
-		//	}
-		//});
+
 	}
 
 	public void showAbout() {
@@ -179,17 +172,6 @@ public class ViewGUI implements IView, Observer {
 		panel.add(ok, BorderLayout.SOUTH);
 	}
 
-
-	public void dragged(MouseEvent event) {
-		controller.dragged(event);
-	}
-	public void pressed(MouseEvent event) {
-		controller.pressed(event);
-	}
-	public void released(MouseEvent event) {
-		controller.released(event);
-	}
-
 	@Override
 	public void update(Observable o, Object arg) {
 		int k = model.getCount();
@@ -197,6 +179,8 @@ public class ViewGUI implements IView, Observer {
 		result[1][k-1].setText(""+model.getCows());
 		controller.isWin();
 	}
+	
+
 
 
 	@Override
